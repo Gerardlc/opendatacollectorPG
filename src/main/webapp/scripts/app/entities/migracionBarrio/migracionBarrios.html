@@ -1,0 +1,81 @@
+<div>
+    <h2 translate="opendatacollectorApp.migracionBarrio.home.title">MigracionBarrios</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="migracionBarrio.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+class="hidden-xs"                        translate="opendatacollectorApp.migracionBarrio.home.createLabel">Create new MigracionBarrio
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'opendatacollectorApp.migracionBarrio.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="search()">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="numeroPersonas"><span translate="opendatacollectorApp.migracionBarrio.numeroPersonas">NumeroPersonas</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="anyo"><span translate="opendatacollectorApp.migracionBarrio.anyo">Anyo</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="barrioOrigen.nombre"><span translate="opendatacollectorApp.migracionBarrio.barrioOrigen">barrioOrigen</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="barrioDestino.nombre"><span translate="opendatacollectorApp.migracionBarrio.barrioDestino">barrioDestino</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="migracionBarrio in migracionBarrios track by migracionBarrio.id">
+                    <td><a ui-sref="migracionBarrio.detail({id:migracionBarrio.id})">{{migracionBarrio.id}}</a></td>
+                    <td>{{migracionBarrio.numeroPersonas}}</td>
+                    <td>{{migracionBarrio.anyo}}</td>
+                    <td>
+                        <a ui-sref="barrio.detail({id:migracionBarrio.barrioOrigen.id})">{{migracionBarrio.barrioOrigen.nombre}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="barrio.detail({id:migracionBarrio.barrioDestino.id})">{{migracionBarrio.barrioDestino.nombre}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="migracionBarrio.detail({id:migracionBarrio.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="migracionBarrio.edit({id:migracionBarrio.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="migracionBarrio.delete({id:migracionBarrio.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <uib-pagination class="pagination-sm" total-items="totalItems" ng-model="page" ng-change="loadAll()"></uib-pagination>
+    </div>
+</div>

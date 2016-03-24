@@ -1,0 +1,75 @@
+<div>
+    <h2 translate="opendatacollectorApp.barrio.home.title">Barrios</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="barrio.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+class="hidden-xs"                        translate="opendatacollectorApp.barrio.home.createLabel">Create new Barrio
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'opendatacollectorApp.barrio.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="search()">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nombre"><span translate="opendatacollectorApp.barrio.nombre">Nombre</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nombreCsvOrigen"><span translate="opendatacollectorApp.barrio.nombreCsvOrigen">NombreCsvOrigen</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nombreCsvDestino"><span translate="opendatacollectorApp.barrio.nombreCsvDestino">NombreCsvDestino</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="barrio in barrios track by barrio.id">
+                    <td><a ui-sref="barrio.detail({id:barrio.id})">{{barrio.id}}</a></td>
+                    <td>{{barrio.nombre}}</td>
+                    <td>{{barrio.nombreCsvOrigen}}</td>
+                    <td>{{barrio.nombreCsvDestino}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="barrio.detail({id:barrio.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="barrio.edit({id:barrio.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="barrio.delete({id:barrio.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <uib-pagination class="pagination-sm" total-items="totalItems" ng-model="page" ng-change="loadAll()"></uib-pagination>
+    </div>
+</div>

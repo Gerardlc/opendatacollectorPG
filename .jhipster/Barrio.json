@@ -1,0 +1,39 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "migracionBarrioOrigen",
+            "otherEntityName": "migracionBarrio",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "barrioOrigen"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "migracionBarrioDestino",
+            "otherEntityName": "migracionBarrio",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "barrioDestino"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "nombreCsvOrigen",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "nombreCsvDestino",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20151226125540",
+    "dto": "no",
+    "service": "no",
+    "pagination": "pagination"
+}

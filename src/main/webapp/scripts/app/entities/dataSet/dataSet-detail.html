@@ -1,0 +1,80 @@
+
+<div>
+    <h2><span translate="opendatacollectorApp.dataSet.detail.title">DataSet</span> {{dataSet.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="opendatacollectorApp.dataSet.nombre">Nombre</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{dataSet.nombre}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="opendatacollectorApp.dataSet.descripcion">Descripcion</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{dataSet.descripcion}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="opendatacollectorApp.dataSet.fecha">Fecha</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{dataSet.fecha | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="opendatacollectorApp.dataSet.enlaceDescarga">EnlaceDescarga</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{dataSet.enlaceDescarga}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="opendatacollectorApp.dataSet.ciudad">ciudad</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="ciudad.detail({id:dataSet.ciudad.id})">{{dataSet.ciudad.nombre}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="opendatacollectorApp.dataSet.categoria">categoria</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="categoria.detail({id:dataSet.categoria.id})">{{dataSet.categoria.nombre}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="opendatacollectorApp.dataSet.subCategoria">subCategoria</span>
+                </td>
+                <td>
+                    <span ng-repeat="subCategoria in dataSet.subCategorias">
+                        <a class="form-control-static" ui-sref="subCategoria.detail({id: {{subCategoria.id}}})">{{subCategoria.nombre}}</a>{{$last ? '' : ', '}}
+                    </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

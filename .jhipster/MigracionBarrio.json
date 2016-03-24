@@ -1,0 +1,39 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "barrioOrigen",
+            "otherEntityName": "barrio",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "barrioDestino",
+            "otherEntityName": "barrio",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "numeroPersonas",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "min"
+            ],
+            "fieldValidateRulesMin": "0"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "anyo",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20151226125841",
+    "dto": "no",
+    "service": "no",
+    "pagination": "pagination"
+}

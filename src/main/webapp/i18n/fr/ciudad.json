@@ -1,0 +1,26 @@
+{
+    "opendatacollectorApp": {
+        "ciudad" : {
+            "home": {
+                "title": "Ciudads",
+                "createLabel": "Créer un nouveau Ciudad",
+                "createOrEditLabel": "Créer ou éditer un Ciudad",
+                "search": "Search for Ciudad"
+            },
+            "created": "Un nouveau Ciudad a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Ciudad avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Ciudad avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Ciudad {{ id }} ?"
+            },
+            "detail": {
+                "title": "Ciudad"
+            },
+            "nombre": "Nombre",
+            "pais": "Pais",
+            "categoria": "Categoria",
+            "dataSet": "DataSet"
+        }
+    }
+}
+

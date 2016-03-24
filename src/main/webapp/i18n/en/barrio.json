@@ -1,0 +1,26 @@
+{
+    "opendatacollectorApp": {
+        "barrio" : {
+            "home": {
+                "title": "Barrios",
+                "createLabel": "Create a new Barrio",
+                "createOrEditLabel": "Create or edit a Barrio",
+                "search": "Search for Barrio"
+            },
+            "created": "A new Barrio is created with identifier {{ param }}",
+            "updated": "A Barrio is updated with identifier {{ param }}",
+            "deleted": "A Barrio is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Barrio {{ id }}?"
+            },
+            "detail": {
+                "title": "Barrio"
+            },
+            "nombre": "Nombre",
+            "nombreCsvOrigen": "NombreCsvOrigen",
+            "nombreCsvDestino": "NombreCsvDestino",
+            "migracionBarrioOrigen": "MigracionBarrioOrigen",
+            "migracionBarrioDestino": "MigracionBarrioDestino"
+        }
+    }
+}

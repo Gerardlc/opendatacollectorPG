@@ -1,0 +1,22 @@
+{
+    "opendatacollectorApp": {
+        "recuento" : {
+            "home": {
+                "title": "Recuentos",
+                "createLabel": "Créer un nouveau Recuento",
+                "createOrEditLabel": "Créer ou éditer un Recuento",
+                "search": "Search for Recuento"
+            },
+            "created": "Un nouveau Recuento a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Recuento avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Recuento avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Recuento {{ id }} ?"
+            },
+            "detail": {
+                "title": "Recuento"
+            }
+        }
+    }
+}
+

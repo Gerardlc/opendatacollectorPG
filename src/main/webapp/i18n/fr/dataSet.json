@@ -1,0 +1,29 @@
+{
+    "opendatacollectorApp": {
+        "dataSet" : {
+            "home": {
+                "title": "DataSets",
+                "createLabel": "Créer un nouveau DataSet",
+                "createOrEditLabel": "Créer ou éditer un DataSet",
+                "search": "Search for DataSet"
+            },
+            "created": "Un nouveau DataSet a été créé avec l'identifiant {{ param }}",
+            "updated": "Le DataSet avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le DataSet avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le DataSet {{ id }} ?"
+            },
+            "detail": {
+                "title": "DataSet"
+            },
+            "nombre": "Nombre",
+            "descripcion": "Descripcion",
+            "fecha": "Fecha",
+            "enlaceDescarga": "EnlaceDescarga",
+            "ciudad": "Ciudad",
+            "categoria": "Categoria",
+            "subCategoria": "SubCategoria"
+        }
+    }
+}
+

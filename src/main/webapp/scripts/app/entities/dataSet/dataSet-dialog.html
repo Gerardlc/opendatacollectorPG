@@ -1,0 +1,70 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myDataSetLabel" translate="opendatacollectorApp.dataSet.home.createOrEditLabel">Create or edit a DataSet</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="dataSet.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="opendatacollectorApp.dataSet.nombre" for="field_nombre">Nombre</label>
+            <input type="text" class="form-control" name="nombre" id="field_nombre"
+                    ng-model="dataSet.nombre"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="opendatacollectorApp.dataSet.descripcion" for="field_descripcion">Descripcion</label>
+            <input type="text" class="form-control" name="descripcion" id="field_descripcion"
+                    ng-model="dataSet.descripcion"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="opendatacollectorApp.dataSet.fecha" for="field_fecha">Fecha</label>
+                <div class="input-group">
+                    <input id="field_fecha" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="dataSet.fecha" is-open="datePickerForFecha.status.opened"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="datePickerForFechaOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="opendatacollectorApp.dataSet.enlaceDescarga" for="field_enlaceDescarga">EnlaceDescarga</label>
+            <input type="text" class="form-control" name="enlaceDescarga" id="field_enlaceDescarga"
+                    ng-model="dataSet.enlaceDescarga"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="opendatacollectorApp.dataSet.ciudad" for="field_ciudad">ciudad</label>
+            <select class="form-control" id="field_ciudad" name="ciudad" ng-model="dataSet.ciudad" ng-options="ciudad as ciudad.nombre for ciudad in ciudads track by ciudad.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="opendatacollectorApp.dataSet.categoria" for="field_categoria">categoria</label>
+            <select class="form-control" id="field_categoria" name="categoria" ng-model="dataSet.categoria" ng-options="categoria as categoria.nombre for categoria in categorias track by categoria.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="opendatacollectorApp.dataSet.subCategoria" for="field_subCategoria">subCategoria</label>
+            <select class="form-control" id="field_subCategoria" multiple name="subCategoria" ng-model="dataSet.subCategorias" ng-options="subCategoria as subCategoria.nombre for subCategoria in subcategorias track by subCategoria.id"></select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

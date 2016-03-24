@@ -1,0 +1,35 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "categoria",
+            "otherEntityName": "categoria",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "nombre",
+            "ownerSide": true
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "dataSet",
+            "otherEntityName": "dataSet",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "ciudad"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "pais",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20151207192127",
+    "dto": "no",
+    "service": "no",
+    "pagination": "pagination"
+}

@@ -1,0 +1,25 @@
+{
+    "opendatacollectorApp": {
+        "migracionBarrio" : {
+            "home": {
+                "title": "MigracionBarrios",
+                "createLabel": "Create a new MigracionBarrio",
+                "createOrEditLabel": "Create or edit a MigracionBarrio",
+                "search": "Search for MigracionBarrio"
+            },
+            "created": "A new MigracionBarrio is created with identifier {{ param }}",
+            "updated": "A MigracionBarrio is updated with identifier {{ param }}",
+            "deleted": "A MigracionBarrio is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete MigracionBarrio {{ id }}?"
+            },
+            "detail": {
+                "title": "MigracionBarrio"
+            },
+            "numeroPersonas": "NumeroPersonas",
+            "anyo": "Anyo",
+            "barrioOrigen": "BarrioOrigen",
+            "barrioDestino": "BarrioDestino"
+        }
+    }
+}

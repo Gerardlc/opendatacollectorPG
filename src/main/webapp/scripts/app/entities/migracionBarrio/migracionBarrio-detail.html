@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="opendatacollectorApp.migracionBarrio.detail.title">MigracionBarrio</span> {{migracionBarrio.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="opendatacollectorApp.migracionBarrio.numeroPersonas">NumeroPersonas</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{migracionBarrio.numeroPersonas}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="opendatacollectorApp.migracionBarrio.anyo">Anyo</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{migracionBarrio.anyo}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="opendatacollectorApp.migracionBarrio.barrioOrigen">barrioOrigen</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="barrio.detail({id:migracionBarrio.barrioOrigen.id})">{{migracionBarrio.barrioOrigen.nombre}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="opendatacollectorApp.migracionBarrio.barrioDestino">barrioDestino</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="barrio.detail({id:migracionBarrio.barrioDestino.id})">{{migracionBarrio.barrioDestino.nombre}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

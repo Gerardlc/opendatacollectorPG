@@ -1,0 +1,42 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "subCategoria",
+            "otherEntityName": "subCategoria",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "categoria"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "dataSet",
+            "otherEntityName": "dataSet",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "categoria"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "ciudad",
+            "otherEntityName": "ciudad",
+            "relationshipType": "many-to-many",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "categoria"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "descripcion",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20151207191951",
+    "dto": "no",
+    "service": "no",
+    "pagination": "pagination"
+}

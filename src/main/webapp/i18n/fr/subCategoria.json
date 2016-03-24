@@ -1,0 +1,26 @@
+{
+    "opendatacollectorApp": {
+        "subCategoria" : {
+            "home": {
+                "title": "SubCategorias",
+                "createLabel": "Créer un nouveau SubCategoria",
+                "createOrEditLabel": "Créer ou éditer un SubCategoria",
+                "search": "Search for SubCategoria"
+            },
+            "created": "Un nouveau SubCategoria a été créé avec l'identifiant {{ param }}",
+            "updated": "Le SubCategoria avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le SubCategoria avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le SubCategoria {{ id }} ?"
+            },
+            "detail": {
+                "title": "SubCategoria"
+            },
+            "nombre": "Nombre",
+            "descripcion": "Descripcion",
+            "categoria": "Categoria",
+            "dataSet": "DataSet"
+        }
+    }
+}
+

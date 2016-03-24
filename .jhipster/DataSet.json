@@ -1,0 +1,52 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "ciudad",
+            "otherEntityName": "ciudad",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "categoria",
+            "otherEntityName": "categoria",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "subCategoria",
+            "otherEntityName": "subCategoria",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "nombre",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "descripcion",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "fecha",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "enlaceDescarga",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20151207192740",
+    "dto": "no",
+    "service": "no",
+    "pagination": "pagination"
+}

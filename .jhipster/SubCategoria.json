@@ -1,0 +1,35 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "categoria",
+            "otherEntityName": "categoria",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "dataSet",
+            "otherEntityName": "dataSet",
+            "relationshipType": "many-to-many",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "subCategoria"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "descripcion",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20151207192254",
+    "dto": "no",
+    "service": "no",
+    "pagination": "pagination"
+}
